@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700&display=swap" rel="stylesheet">
-    <title>Web Components</title>
-    <style>
-      * { font-family: 'Noto Sans JP'; font-weight: 500; }
-    </style>
-  </head>
-  <body>
-    <h1>Web Components</h1>
-  </body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Web Components</title>
+		<script src="tooltip.js"></script>
+		<script src="confirm-link.js"></script>
+		<script src="toggle-button.js"></script>
+		<style>
+			* { font-family: 'Helvetica'; font-weight: 400; }
+		</style>
+	</head>
+	<body>
+		<h1>Web Components</h1>
+
+		<h2>Module 1</h2>
+		<p><jc-tooltip>Default</jc-tooltip></p>
+		<p><jc-tooltip text="This is my text attribute">Slotted</jc-tooltip></p>
+		<p><a is="jc-confirm-link" href="https://www.google.com">Confirm Link</a></p>
+		<hr />
+
+		<h2>Assignment 1</h2>
+		<toggle-button is-visible="true">Button 1</toggle-button>
+		<toggle-button>Button 2</toggle-button>
+		<hr />
+
+	</body>
 </html>
