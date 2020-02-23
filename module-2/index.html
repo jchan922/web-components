@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Web Components</title>
+		<script src="tooltip.js"></script>
+		<style>
+			:root { --color-primary: lightblue; }
+			* { box-sizing: border-box; font-family: 'Helvetica'; }
+			hr { margin: 2em 0; }
+		</style>
+	</head>
+	<body>
+		<h1>Web Components</h1>
+
+		<h2>Module 2</h2>
+		
+		<p>
+			<jc-tooltip class="important" text="Web Components is a set of standards.">
+				<span class="highlight">Web Components</span>
+			</jc-tooltip>
+			are awesome!
+		</p>
+
+		<jc-tooltip></jc-tooltip>
+
+		<hr />
+	</body>
+</html>
