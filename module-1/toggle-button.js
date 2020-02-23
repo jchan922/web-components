@@ -3,13 +3,14 @@ class ToggleButton extends HTMLElement {
         super();
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.innerHTML = `
-        <style>
-        #info-box.hidden { display: none; }
-        </style>
-        <button type="button">Show</button>
-        <p id="info-box" class="hidden">
-        <slot></slot>
-        </p>
+            <style>
+                #info-box.hidden { display: none; }
+            </style>
+
+            <button type="button">Show</button>
+            <p id="info-box" class="hidden">
+                <slot></slot>
+            </p>
         `;
         this._button = this.shadowRoot.querySelector('button');
         this._infoBox = this.shadowRoot.getElementById('info-box');
