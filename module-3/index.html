@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Web Components</title>
+		<script src="modal.js"></script>
+		<style>
+			:root { --color-primary: lightblue; }
+			* { box-sizing: border-box; font-family: 'Helvetica'; }
+			body { margin: 2rem; }
+			hr { margin: 2rem 0; }
+		</style>
+	</head>
+	<body>
+
+		<jc-modal>
+			<h2 slot="title">Please Confirm</h2>
+			<p>With your confirmation you agree to pay the full amount.</p>
+		</jc-modal>
+		<p>Please confirm your choice</p>
+		<button>Show Details & Confirm</button>
+
+		<script>
+			const confirmBtn = document.querySelector('button');
+			const modal = document.querySelector('jc-modal');
+
+			confirmBtn.addEventListener('click', () => {
+				// modal.setAttribute('opened', '')
+				if (!modal.isOpen) {
+					modal.open();
+					console.log('Opening...')
+				}
+			});
+
+			// custom events from web component
+			modal.addEventListener('confirm', () => console.log('Confirmed...'));
+			modal.addEventListener('cancel', () => console.log('Cancelled...'));
+
+		</script>
+
+	</body>
+</html>
